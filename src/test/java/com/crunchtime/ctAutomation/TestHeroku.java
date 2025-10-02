@@ -13,7 +13,7 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 public class TestHeroku {
 
 
-    @Test(invocationCount = 20, threadPoolSize = 3)
+    @Test(invocationCount = 20, threadPoolSize = 6)
     public void herokuTest(){
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
