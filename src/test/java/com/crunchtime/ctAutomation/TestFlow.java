@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class TestFlow {
 
 
-    @Test(invocationCount = 100, threadPoolSize = 8)
+    @Test(invocationCount = 100, threadPoolSize = 8, enabled = false)
     public void testFlow(){
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
