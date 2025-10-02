@@ -4,7 +4,7 @@
 
     <test name="Test">
         <classes>
-            <class name="com.crunchtime.ctAutomation.TestFlow"/>
+            <class name="com.crunchtime.ctAutomation.DemoQA"/>
         </classes>
     </test>
 </suite>
