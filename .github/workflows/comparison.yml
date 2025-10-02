@@ -15,6 +15,18 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Define Resource Monitor Script
+        run: |
+          echo '#!/bin/bash' > monitor.sh
+          echo 'while true; do' >> monitor.sh
+          echo '  CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk "{print 100 - \$1}")' >> monitor.sh
+          echo '  MEM_USAGE=$(free -m | grep Mem | awk "{print \$3/\$2 * 100.0}")' >> monitor.sh
+          echo '  echo "$(date +%s),CPU:$CPU_USAGE,MEM:$MEM_USAGE" >> resource_log_java.txt' >> monitor.sh
+          echo '  sleep 3' >> monitor.sh
+          echo 'done' >> monitor.sh
+          chmod +x monitor.sh
+        shell: bash
+
       - name: Report runner specifications
         run: |
           echo "--- CPU Info ---"
@@ -29,5 +41,26 @@ jobs:
         run: mvn -B install -D skipTests --no-transfer-progress
       - name: Ensure browsers are installed
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
-      - name: Run tests
-        run: mvn test
+      - name: Run tests and Monitor Resources
+        run: |
+          ./monitor.sh &
+                    MONITOR_PID=$!
+                    echo "Monitor PID: $MONITOR_PID"
+
+                    mvn test
+                    TEST_EXIT_CODE=$?
+
+                    kill $MONITOR_PID
+
+                    if [ $TEST_EXIT_CODE -ne 0 ]; then
+                        echo "Tests failed with exit code $TEST_EXIT_CODE."
+                        exit $TEST_EXIT_CODE
+                    fi
+                  shell: bash
+      - name: Upload performance log
+        uses: actions/upload-artifact@v4
+        if: ${{!cancelled()}}
+        with:
+          name: playwright-java-performance-log
+          path: resource_log_java.txt
+          retention-days: 7
