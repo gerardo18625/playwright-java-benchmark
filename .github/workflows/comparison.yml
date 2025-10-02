@@ -14,6 +14,17 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Report runner specifications
+        run: |
+          echo "--- CPU Info ---"
+                  nproc --all
+                  lscpu
+                  echo "--- Memory Info ---"
+                  free -h
+                  echo "--- Disk Space ---"
+                  df -h
+
       - name: Build & Install
         run: mvn -B install -D skipTests --no-transfer-progress
       - name: Ensure browsers are installed

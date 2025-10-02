@@ -72,7 +72,7 @@ public class TestDemoQA {
             page.getByText("Music").click();
 
             // Set the file to upload
-            page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Select picture")).setInputFiles(Paths.get("/Users/gerardohernandez/workspace/POC_PLAYWRIGHT/PLAYWRIGHT_FOR_CI_JAVA/src/test/java/com/crunchtime/ctAutomation/reportPortal.jpg"));
+            //page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Select picture")).setInputFiles(Paths.get("/Users/gerardohernandez/workspace/POC_PLAYWRIGHT/PLAYWRIGHT_FOR_CI_JAVA/src/test/java/com/crunchtime/ctAutomation/reportPortal.jpg"));
 
             // Fill the address
             page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Current Address")).click();
