@@ -39,8 +39,20 @@ jobs:
 
       - name: Build & Install
         run: mvn -B install -D skipTests --no-transfer-progress
+
+      - name: Cache Playwright Browsers
+        id: cache-playwright
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Ensure browsers are installed
+        if: steps.cache-playwright.outputs.cache-hit != 'true'
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+
       - name: Run tests and Monitor Resources
         run: |
           ./monitor.sh &
