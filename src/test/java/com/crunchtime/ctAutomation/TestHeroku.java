@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class HerokuTest {
+public class TestHeroku {
 
 
     @Test

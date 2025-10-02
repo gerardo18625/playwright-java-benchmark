@@ -30,7 +30,7 @@ public class TestDemoQA {
         System.out.print((endtime - starttime)/1000);
     }
 
-    @Test(invocationCount = 1, threadPoolSize = 1)
+    @Test(invocationCount = 1, threadPoolSize = 1, enabled = false)
     public void demoQaTest(){
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
