@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class DemoQA {
+public class TestDemoQA {
 
     long starttime;
     long endtime;
