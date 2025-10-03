@@ -25,7 +25,7 @@ jobs:
           echo '  CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk "{print 100 - \$1}")' >> monitor.sh
           echo '  MEM_USAGE=$(free -m | grep Mem | awk "{print \$3/\$2 * 100.0}")' >> monitor.sh
           echo '  echo "$(date +%s),CPU:$CPU_USAGE,MEM:$MEM_USAGE" >> resource_log_java.txt' >> monitor.sh
-          echo '  sleep 1' >> monitor.sh
+          echo '  sleep 3' >> monitor.sh
           echo 'done' >> monitor.sh
           chmod +x monitor.sh
         shell: bash
