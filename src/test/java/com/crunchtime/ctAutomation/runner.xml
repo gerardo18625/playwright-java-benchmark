@@ -1,8 +1,503 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="!Inventory - Reports - Actual Cost - All Tests!" configfailurepolicy="continue" skipfailedinvocationcounts="false" parallel="tests" thread-count="8">
+<suite name="!Inventory - Reports - Actual Cost - All Tests!" configfailurepolicy="continue" parallel="methods" thread-count="4">
 
-    <test name="Test">
+    <test name="Test 1">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 2">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 3">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 4">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 5">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 6">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 7">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 8">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 9">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 10">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 11">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 12">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 13">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 14">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 15">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 16">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 17">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 18">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 19">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 20">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 21">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 22">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 23">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 24">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 25">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 26">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 27">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 28">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 29">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 30">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 31">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 32">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 33">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 34">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 35">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 36">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 37">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 38">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 39">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 40">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 41">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 42">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 43">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 44">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 45">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 46">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 47">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 48">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 49">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 50">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 51">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 52">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 53">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 54">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 55">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 56">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 57">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 58">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 59">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 60">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 61">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 62">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 63">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 64">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 65">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 66">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 67">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 68">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 69">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 70">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 71">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 72">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 73">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 74">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 75">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 76">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 77">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 78">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 79">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 80">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 81">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 82">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 83">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 84">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 85">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 86">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 87">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 88">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 89">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 90">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 91">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 92">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 93">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 94">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 95">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 96">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 97">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 98">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 99">
+        <classes>
+            <class name="com.crunchtime.ctAutomation.TestHeroku"/>
+        </classes>
+    </test>
+    <test name="Test 100">
         <classes>
             <class name="com.crunchtime.ctAutomation.TestHeroku"/>
         </classes>
