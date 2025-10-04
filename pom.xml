@@ -12,6 +12,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <suiteXmlFile>runner.xml</suiteXmlFile>
     </properties>
 
     <dependencies>
@@ -20,24 +21,32 @@
             <artifactId>playwright</artifactId>
             <version>1.54.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.10.2</version>
+            <scope>test</scope>
         </dependency>
-
     </dependencies>
 
-
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
-                <!-- References to interface static methods are allowed only at source level 1.8 or above -->
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -46,11 +55,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version> <configuration>
-                <suiteXmlFiles>
-                    <suiteXmlFile>src/test/java/com/crunchtime/ctAutomation/runner.xml</suiteXmlFile>
-                </suiteXmlFiles>
-            </configuration>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${project.build.directory}/test-classes/${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>

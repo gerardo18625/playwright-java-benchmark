@@ -4,6 +4,7 @@ import com.microsoft.playwright.*;
 import com.microsoft.playwright.assertions.LocatorAssertions;
 import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.MouseButton;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.regex.Pattern;
@@ -12,15 +13,15 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class TestHeroku {
 
-
-    @Test(invocationCount = 100, threadPoolSize = 4)
-    public void herokuTest(){
+    public void executeTest(){
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                     .setHeadless(true));
             BrowserContext context = browser.newContext();
             Page page = context.newPage();
             page.setDefaultTimeout(60000);
+
+            System.out.println("Running the test");
 
             // Navigate to the herokuapp
             page.navigate("https://the-internet.herokuapp.com/");
@@ -81,10 +82,7 @@ public class TestHeroku {
 
             // Context menu
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Context Menu")).click();
-            page.onceDialog(dialog -> {
-                System.out.println(String.format("Dialog message: %s", dialog.message()));
-                dialog.dismiss();
-            });
+            page.onceDialog(Dialog::dismiss);
             page.locator("#hot-spot").click(new Locator.ClickOptions()
                     .setButton(MouseButton.RIGHT));
 
@@ -99,5 +97,511 @@ public class TestHeroku {
             page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Enter todays date:$"))).getByRole(AriaRole.TEXTBOX).fill("2010-01-01");
             page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Enter your Birthday:$"))).getByRole(AriaRole.TEXTBOX).fill("2026-01-01");
         }
+
+    }
+
+    @BeforeSuite
+    public void setup(){
+        System.out.println("Running with suite:" + System.getProperty("threadCount") + " threads");
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest1(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest2(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest3(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest4(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest5(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest6(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest7(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest8(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest9(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest10(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest11(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest12(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest13(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest14(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest15(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest16(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest17(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest18(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest19(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest20(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest21(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest22(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest23(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest24(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-1"})
+    public void herokuTest25(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest26(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest27(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest28(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest29(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest30(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest31(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest32(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest33(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest34(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest35(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest36(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest37(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest38(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest39(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest40(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest41(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest42(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest43(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest44(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest45(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest46(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest47(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest48(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest49(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-2"})
+    public void herokuTest50(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest51(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest52(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest53(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest54(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest55(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest56(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest57(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest58(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest59(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest60(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest61(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest62(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest63(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest64(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest65(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest66(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest67(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest68(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest69(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest70(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest71(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest72(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest73(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest74(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-3"})
+    public void herokuTest75(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest76(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest77(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest78(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest79(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest80(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest81(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest82(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest83(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest84(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest85(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest86(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest87(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest88(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest89(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest90(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest91(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest92(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest93(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest94(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest95(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest96(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest97(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest98(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest99(){
+        executeTest();
+    }
+
+    @Test(groups = {"shard-4"})
+    public void herokuTest100(){
+        executeTest();
     }
 }
