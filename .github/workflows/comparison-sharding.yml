@@ -1,4 +1,4 @@
-name: Playwright Tests - Sharding
+name: Playwright (Java) Benchmark - Sharding
 on:
   workflow_dispatch:
 jobs:
