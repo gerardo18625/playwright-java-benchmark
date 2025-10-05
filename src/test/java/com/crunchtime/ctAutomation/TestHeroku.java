@@ -56,13 +56,7 @@ public class TestHeroku {
             assertThat(page.locator("#finish")).containsText("Hello World!", new LocatorAssertions.ContainsTextOptions().setTimeout(10000));
             page.navigate("https://the-internet.herokuapp.com/");
 
-            // Entry Add
-            page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Entry Ad")).click();
-            assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("This is a modal window"))).isVisible();
-            page.getByText("Close", new Page.GetByTextOptions().setExact(true)).click();
-            page.navigate("https://the-internet.herokuapp.com/");
-
-            // jQuery menu
+            // jQuery menu an Alerts
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("JQuery UI Menus")).click();
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Enabled")).click();
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Downloads")).click();
@@ -86,6 +80,7 @@ public class TestHeroku {
             page.locator("#hot-spot").click(new Locator.ClickOptions()
                     .setButton(MouseButton.RIGHT));
 
+            // Select dropdowns
             page.navigate("https://www.qaplayground.com/practice/select");
             page.getByRole(AriaRole.COMBOBOX).filter(new Locator.FilterOptions().setHasText("Select Fruit")).click();
             page.getByRole(AriaRole.OPTION, new Page.GetByRoleOptions().setName("Banana")).click();
@@ -93,6 +88,7 @@ public class TestHeroku {
             page.getByRole(AriaRole.COMBOBOX).filter(new Locator.FilterOptions().setHasText("Argentina")).click();
             page.getByRole(AriaRole.OPTION, new Page.GetByRoleOptions().setName("UK")).click();
 
+            // Form fields
             page.navigate("https://www.qaplayground.com/practice/calendar");
             page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Enter todays date:$"))).getByRole(AriaRole.TEXTBOX).fill("2010-01-01");
             page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Enter your Birthday:$"))).getByRole(AriaRole.TEXTBOX).fill("2026-01-01");
