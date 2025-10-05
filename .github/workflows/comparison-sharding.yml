@@ -60,7 +60,7 @@ jobs:
                     MONITOR_PID=$!
                     echo "Monitor PID: $MONITOR_PID"
 
-                    mvn test -Dgroups=shard-${{ matrix.shard }} -Dsurefire.threadCount=4
+                    mvn test mvn test -DthreadCount=4 -DsuiteXmlFile=runner.xml -Dgroups=shard-${{ matrix.shard }}
                     TEST_EXIT_CODE=$?
 
                     kill $MONITOR_PID
