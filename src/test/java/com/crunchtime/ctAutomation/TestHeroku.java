@@ -15,6 +15,7 @@ public class TestHeroku {
 
     public void executeTest(){
         try (Playwright playwright = Playwright.create()) {
+
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                     .setHeadless(true));
             BrowserContext context = browser.newContext();
@@ -41,8 +42,6 @@ public class TestHeroku {
             page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Enable")).click();
             page.getByRole(AriaRole.TEXTBOX).click();
             page.getByRole(AriaRole.TEXTBOX).fill("Playwright");
-            page.getByRole(AriaRole.TEXTBOX).click();
-            page.getByRole(AriaRole.TEXTBOX).press("Enter");
             page.navigate("https://the-internet.herokuapp.com/");
 
             // Dynamic loading
@@ -74,7 +73,7 @@ public class TestHeroku {
             page1.close();
             page.navigate("https://the-internet.herokuapp.com/");
 
-            // Context menu
+            // Context Menu and Alert
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Context Menu")).click();
             page.onceDialog(Dialog::dismiss);
             page.locator("#hot-spot").click(new Locator.ClickOptions()
@@ -88,7 +87,7 @@ public class TestHeroku {
             page.getByRole(AriaRole.COMBOBOX).filter(new Locator.FilterOptions().setHasText("Argentina")).click();
             page.getByRole(AriaRole.OPTION, new Page.GetByRoleOptions().setName("UK")).click();
 
-            // Form fields
+            // Date inputs
             page.navigate("https://www.qaplayground.com/practice/calendar");
             page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Enter todays date:$"))).getByRole(AriaRole.TEXTBOX).fill("2010-01-01");
             page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Enter your Birthday:$"))).getByRole(AriaRole.TEXTBOX).fill("2026-01-01");
